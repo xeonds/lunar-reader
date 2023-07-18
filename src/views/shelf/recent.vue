@@ -1,3 +1,3 @@
 <template>
-  <div>rendered text</div>
+  <div>最近阅读</div>
 </template>

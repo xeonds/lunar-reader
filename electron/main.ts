@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -15,7 +15,7 @@ function createWindow() {
     titleBarOverlay: {
       color: '#00000000',
       symbolColor: '#66cff',
-      height: 75
+      // height: 75
     },
     icon: path.join(process.env.PUBLIC, 'lunar-reader.png'),
     minWidth: 800,
@@ -39,7 +39,9 @@ function createWindow() {
 }
 
 app.on('window-all-closed', () => {
-  win = null
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
 })
 
 app.whenReady().then(() => {

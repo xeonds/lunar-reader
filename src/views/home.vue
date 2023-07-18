@@ -52,14 +52,14 @@
 import { Collection, Timer, Setting, Reading } from "@element-plus/icons-vue";
 </script>
 
-<style scoped lang="less">
+<style scoped>
 #root {
   height: 100vh;
   width: 100vw;
   background-color: #f5f7fa;
   #header {
-    height: 4rem;
-    padding: 1rem;
+    height: 3rem;
+    padding-top: 0.5rem;
     #left-group {
       height: 100%;
       display: flex;
@@ -74,7 +74,7 @@ import { Collection, Timer, Setting, Reading } from "@element-plus/icons-vue";
     }
   }
   #container {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 3rem);
     #aside {
       padding-inline: 1rem;
       width: auto;
